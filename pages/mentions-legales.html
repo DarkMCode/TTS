@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head id="head"></head>
-
-    <script>
-        fetch("../includes/head.html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("head").innerHTML = `
-                    <title>Mentions légales – DARKMCODE</title>
-                    ${html}
-                `;
-            });
-    </script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mentions légales – DARKMCODE</title>
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
 
 	<body>
 		<div class="wrapper">
@@ -20,7 +14,6 @@
                     <img src="../assets/logos/DarkMCode/logo_rouge_name_low_contr.png" alt="Logo DARKMCODE" class="logo">
 					<span class="title">DARKMCODE</span>
 				</div>
-				
 				<nav class="nav">
 					<a href="../index.html">Accueil</a>
 					<a href="services.html">Services</a>

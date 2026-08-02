@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head id="head"></head>
-
-    <script>
-        fetch("../includes/head.html")
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById("head").innerHTML = `
-                    <title>Tarifs – DARKMCODE</title>
-                    ${html}
-                `;
-            });
-    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarifs – DARKMCODE</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
 
     <body>
         <div class="wrapper">

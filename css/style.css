@@ -8,7 +8,6 @@
   --footer-bg: #121212;
   --hover: #26c6da;
   --nav: #8f8380;
-  --nav-active: #4d4644;
   --font: 'Segoe UI', sans-serif;
 }
 
@@ -93,7 +92,7 @@ a:hover {
 
 .nav a.nav-active {
     text-decoration: underline;
-    color: var(--nav-active);
+    opacity: 0.5;
     pointer-events: none;
     cursor: default;
 } 
@@ -133,6 +132,10 @@ a:hover {
 
 .spaced p {
   margin-bottom: 1.5rem;
+}
+
+.text.spaced:last-of-type {
+    margin-bottom: 30px;
 }
 
 .intro-box {
@@ -183,6 +186,12 @@ a:hover {
 .mod-button:hover {
     background-color: #503f40;
     transform: translateY(-2px);
+}
+
+.button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
 }
 
 main {
