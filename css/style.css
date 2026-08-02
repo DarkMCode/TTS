@@ -8,6 +8,7 @@
   --footer-bg: #121212;
   --hover: #26c6da;
   --nav: #8f8380;
+  --nav-active: #4d4644;
   --font: 'Segoe UI', sans-serif;
 }
 
@@ -89,6 +90,13 @@ a:hover {
 .nav a:hover {
   color: var(--hover);
 }
+
+.nav a.nav-active {
+    text-decoration: underline;
+    color: var(--nav-active);
+    pointer-events: none;
+    cursor: default;
+} 
 
 .hero-video {
     width: 60%;
