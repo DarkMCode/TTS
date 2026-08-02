@@ -44,8 +44,8 @@
                         <p>Développement de l'interface utilisateur</p>
                         <p>Développement d’un système de musique dynamique basé sur les interactions en jeu</p>
 
-                        <a class="mod-button" href="" target="_blank">
-                            Voir le mod
+                        <a class="mod-button button-disabled" href="" target="_blank">
+                            Voir le mod (Prochainement)
                         </a>
                     </div>
 
@@ -70,15 +70,19 @@
                         <a class="mod-button" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3568111694" target="_blank">
                             Voir le mod
                         </a>
-
-                        <br>
                     </div>
                 </section>
             </main>
             
-            <footer class="footer"> 
-                <p>&copy; 2026 DARKMCODE. Tous droits réservés.</p> 
-            </footer>
+            <div id="footer"></div>
+
+            <script>
+                fetch("../includes/footer.html")
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+            </script>
         </div>
     </body>
 </html>
