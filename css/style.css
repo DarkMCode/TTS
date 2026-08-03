@@ -184,13 +184,14 @@ a:hover {
 }
 
 .mod-button:hover {
-    background-color: #503f40;
-    transform: translateY(-2px);
+    opacity: 0.5;
+    color: #d4cfc9;
+    transform: translate(1px, 1px);
 }
 
 .button-disabled {
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.25;
     cursor: default;
 }
 
