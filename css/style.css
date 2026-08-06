@@ -1,7 +1,9 @@
 /* Couleurs sombres apaisantes */
 :root {
   --bg: #0f0f0f;
+  --bgbtn: #3b1c1e;
   --text: #d4cfc9;
+  --subtitle: #c9a3a3;
   --accent: #5a2326;
   --shadow: #26c6da14;
   --header-bg: #1a1a1a;
@@ -149,12 +151,12 @@ a:hover {
 
 .portfolio-subtitle {
     font-size: 1.6rem;
-    color: #c9a3a3;
+    color: var(--subtitle);
 }
 
 .tarifs-subtitle {
     font-size: 1.6rem;
-    color: #c9a3a3;
+    color: var(--subtitle);
 }
 
 .project-media {
@@ -171,25 +173,31 @@ a:hover {
     border-radius: 6px;
 }
 
-.mod-button {
+.btn {
     display: inline-block;
-    padding: 10px 18px;
-    margin-top: 10px;
-    background-color: #3b1c1e;
-    color: #d4cfc9;
+    padding: 7px 7px;
+    margin-top: 5px;
+    min-width: 50px;
+    background-color: var(--bgbtn);
+    color: var(--text);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.mod-button:hover {
+.btn img {
+    vertical-align: middle;
+    max-height: 30px;
+}
+
+.btn:hover {
     opacity: 0.5;
-    color: #d4cfc9;
+    color: var(--text);
     transform: translate(1px, 1px);
 }
 
-.button-disabled {
+.btn-disabled {
     pointer-events: none;
     opacity: 0.25;
     cursor: default;
