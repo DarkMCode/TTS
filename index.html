@@ -4,50 +4,39 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Accueil – DARKMCODE</title>     
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="/TTS/css/style.css"> 
     </head>
 
     <body>
         <div class="wrapper">
-            <header class="header"> 
-                <a href="https://darkmcode.github.io" class="branding"> 
-                    <img src="assets/logos/DarkMCode/logo_rouge_name_low_contr.png" alt="Logo DARKMCODE" class="logo"> 
-                    <span class="title">DARKMCODE</span> 
-                </a> 
+            <header id="header" class="header"></header>
 
-                <nav class="nav"> 
-                    <a href="index.html" class="nav-active">Accueil</a>
-                    <a href="pages/services.html">Services</a> 
-                    <a href="pages/portfolio.html">Portfolio</a> 
-                    <a href="pages/tarifs.html">Tarifs</a>
-                    <a href="pages/contact.html">Contact</a>
-                    <a href="pages/mentions-legales.html">Mentions légales</a>
-                </nav>     
-            </header>
+            <script src="/TTS/js/header.js"></script>
+            
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const index = document.getElementById("index");
+                    index.classList.add("nav-active");
+                });
+            </script>
 
             <main>
                 <section>
-                    <h1 class="title">Création et automatisation de jeux de société sur Tabletop Simulator</h1>
+                    <h1 class="title" >Création et automatisation de jeux de société sur Tabletop Simulator</h1>
                     <div class="text spaced">
                         <p class="intro-box">Scripting, intégration d’assets et conception de systèmes interactifs.
                         </p>
-                    </div>
                     
-                    <video class="hero-video" autoplay muted loop>
-                        <source src="assets/videos/Script_TTS.mp4" type="video/mp4">
-                    </video>
+                        <video class="hero-video" autoplay muted loop>
+                            <source src="/TTS/assets/videos/Script_TTS.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </section>
             </main>
 
             <div id="footer"></div>
 
-            <script>
-                fetch("includes/footer.html")
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-            </script>
+            <script src="/TTS/js/footer.js"></script>
         </div>
 
     </body>

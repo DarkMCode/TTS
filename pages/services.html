@@ -4,26 +4,21 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Services – DARKMCODE</title>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="/TTS/css/style.css">
     </head>
 
     <body>
         <div class="wrapper">
-            <header class="header"> 
-                <a href="https://darkmcode.github.io" class="branding"> 
-                    <img src="../assets/logos/DarkMCode/logo_rouge_name_low_contr.png" alt="Logo DARKMCODE" class="logo"> 
-                    <span class="title">DARKMCODE</span> 
-                </a> 
+            <header id="header" class="header"></header>
 
-                <nav class="nav">
-                    <a href="../index.html">Accueil</a>
-                    <a href="services.html" class="nav-active">Services</a> 
-                    <a href="portfolio.html">Portfolio</a> 
-                    <a href="tarifs.html">Tarifs</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions légales</a>
-                </nav>     
-            </header>
+            <script src="/TTS/js/header.js"></script>
+            
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const index = document.getElementById("services");
+                    index.classList.add("nav-active");
+                });
+            </script>
 
             <main>
                 <section>
@@ -38,7 +33,7 @@
                         <p>Création et intégration de figurines 3D adaptées à Tabletop Simulator</p>
                         <p>Développement de systèmes audio (effets sonores, ambiance, musique intégrée). Site officiel 
                             <a href="https://muzicos.wixsite.com/guillaume-huguenot" target="_blank" class="btn" style="margin-top:5px;">
-                                <img src="/assets/logos/DarkGH/Dark G.H. noir.png" alt="Icône">
+                                <img src="/TTS/assets/logos/DarkGH/Dark G.H. noir.png" alt="Icône">
                             </a>
                         </p>
                         <p>Mise en place d’audio dynamique réagissant aux actions en jeu</p>
@@ -49,13 +44,7 @@
             
             <div id="footer"></div>
 
-            <script>
-                fetch("../includes/footer.html")
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-            </script>
+            <script src="/TTS/js/footer.js"></script>
         </div>
     </body>
 </html>

@@ -3,7 +3,7 @@
   --bg: #0f0f0f;
   --bgbtn: #3b1c1e;
   --text: #d4cfc9;
-  --subtitle: #c9a3a3;
+  --subtitle: #6B4A4C;
   --accent: #5a2326;
   --shadow: #26c6da14;
   --header-bg: #1a1a1a;
@@ -53,8 +53,37 @@ a:hover {
 }
 
 .logo {
-  height: 72px;
+  height: 100px;
   width: auto;
+}
+
+.logo-DMC-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 10px;
+  height: 50px;
+}
+
+.logo-DGH-fixed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  height: 75px;
+}
+
+.main-title {
+  font-family: 'audiowide', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  text-shadow: 0 0 10px var(--shadow);
 }
 
 .title {
@@ -63,6 +92,8 @@ a:hover {
   font-weight: bold;
   color: var(--accent);
   text-align: center;
+  max-width: 80%;
+  margin: 30px auto;
   text-shadow: 0 0 10px var(--shadow);
 }
 
@@ -100,11 +131,10 @@ a:hover {
 } 
 
 .hero-video {
-    width: 60%;
-    max-width: 800px;
+    max-width: 720px;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto 30px auto;
 }
 
 /* Footer */

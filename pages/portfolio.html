@@ -4,26 +4,21 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Portfolio – DARKMCODE</title>     
-        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="/TTS/css/style.css"> 
     </head>
 
     <body>
         <div class="wrapper">
-            <header class="header"> 
-                <a href="https://darkmcode.github.io" class="branding"> 
-                    <img src="../assets/logos/DarkMCode/logo_rouge_name_low_contr.png" alt="Logo DARKMCODE" class="logo">
-                    <span class="title">DARKMCODE</span> 
-                </a>
+            <header id="header" class="header"></header>
 
-                <nav class="nav">
-                    <a href="../index.html">Accueil</a>
-                    <a href="services.html">Services</a>
-                    <a href="portfolio.html" class="nav-active">Portfolio</a> 
-                    <a href="tarifs.html">Tarifs</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions légales</a>
-                </nav>     
-            </header>
+            <script src="/TTS/js/header.js"></script>
+            
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const index = document.getElementById("portfolio");
+                    index.classList.add("nav-active");
+                });
+            </script>
 
             <main>
                 <section>
@@ -33,7 +28,7 @@
                         <h2 class="portfolio-subtitle">Davelthys — Mod Tabletop Simulator</h2>
 
                         <div class="project-media">
-                            <img src="../assets/img/Mise_en_place_Davelthys.png" alt="Miniature Davelthys">
+                            <img src="/TTS/assets/img/Mise_en_place_Davelthys.png" alt="Miniature Davelthys">
                         </div>
 
                         <p>Conception du jeu : règles, cartes et composants</p>
@@ -55,7 +50,7 @@
                         <h2 class="portfolio-subtitle">Hero Quest Gravaillon v2.5 — Mod Tabletop Simulator</h2>
 
                         <div class="project-media">
-                            <img src="../assets/img/Mise_en_place_HQ.png" alt="Miniature HQ">
+                            <img src="/TTS/assets/img/Mise_en_place_HQ.png" alt="Miniature HQ">
                         </div>
                         
                         <p>Mise à jour du Mod de David Dupond</p>
@@ -76,13 +71,7 @@
             
             <div id="footer"></div>
 
-            <script>
-                fetch("../includes/footer.html")
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-            </script>
+            <script src="/TTS/js/footer.js"></script>
         </div>
     </body>
 </html>
