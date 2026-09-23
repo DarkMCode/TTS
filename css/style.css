@@ -10,7 +10,9 @@
   --footer-bg: #121212;
   --hover: #26c6da;
   --nav: #8f8380;
+  --link: #00d2ff;
   --font: 'Segoe UI', sans-serif;
+  --c-width: 720px;
 }
 
 body {
@@ -59,20 +61,32 @@ a:hover {
 
 .logo-DMC-fixed {
   position: absolute;
+  opacity: 40%;
   top: 0;
   left: 0;
-  z-index: 10;
   padding: 10px;
-  height: 50px;
+  height: 60px;
+  
 }
 
 .logo-DGH-fixed {
   position: absolute;
+  opacity: 50%;
   top: 0;
   right: 0;
+  padding-top: 8px;
+  padding-right: 13px;
+  height: 65px;
+}
+
+.logo-DMC-fixed, .logo-DGH-fixed {
   z-index: 10;
-  padding: 10px;
-  height: 75px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-DMC-fixed:hover, .logo-DGH-fixed:hover {
+  opacity: 100%;
+  transform: translateY(-1px);
 }
 
 .main-title {
@@ -131,7 +145,7 @@ a:hover {
 } 
 
 .hero-video {
-    max-width: 720px;
+    max-width: var(--c-width);
     height: auto;
     display: block;
     margin: 0 auto 30px auto;
@@ -158,7 +172,7 @@ a:hover {
   line-height: 1.6;
   color: var(--text);
   text-align: center;
-  max-width: 720px;
+  max-width: var(--c-width);
   margin: 0 auto;
 }
 
@@ -203,6 +217,17 @@ a:hover {
     border-radius: 6px;
 }
 
+.link {
+  color: var(--link);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: var(--text);
+  text-shadow: 0 0 8px var(--link);
+}
+
 .btn {
     display: inline-block;
     padding: 7px 7px;
@@ -213,15 +238,35 @@ a:hover {
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn img {
     vertical-align: middle;
-    max-height: 30px;
 }
 
-.btn:hover {
+.btn_darkgh {
+    display: inline-block;
+    position: absolute;
+    margin-left: 8px;
+    top: -50%;
+    padding: 7px 7px;
+    margin-top: 5px;
+    min-width: 25px;
+    background-color: var(--bgbtn);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn_darkgh img {
+    vertical-align: middle;
+    max-height: 20px;
+}
+
+.btn:hover, .btn_darkgh:hover {
     opacity: 0.5;
     color: var(--text);
     transform: translate(1px, 1px);
@@ -231,6 +276,15 @@ a:hover {
     pointer-events: none;
     opacity: 0.25;
     cursor: default;
+}
+
+.panorama-viewer {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 main {
